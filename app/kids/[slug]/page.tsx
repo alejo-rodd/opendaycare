@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import AppShell from "@/app/components/app-shell";
 import { childProfiles } from "@/data/mock";
 
+export const instant = false;
+
 function ArrowLeftIcon() {
   return (
     <svg
