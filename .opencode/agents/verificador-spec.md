@@ -1,6 +1,6 @@
 ---
 description: Verifica criterios de aceptación de un spec, implementa los cambios necesarios y vuelve a comprobarlos
-mode: primary
+mode: all
 model: opencode-go/gpt-6-luna
 ---
 
