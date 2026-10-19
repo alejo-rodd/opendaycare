@@ -214,8 +214,8 @@ function PostCard({ post }: { post: FeedPost }) {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-background">
-      <aside className="sticky top-0 flex h-screen w-[248px] flex-none flex-col border-r border-border bg-surface px-4 py-6">
+    <div className="flex min-h-screen w-full max-w-full flex-col overflow-x-clip bg-background lg:flex-row">
+      <aside className="sticky top-0 hidden h-screen w-[248px] flex-none flex-col border-r border-border bg-surface px-4 py-6 lg:flex">
         <div className="flex items-center gap-[11px] px-2 pb-[22px] pt-1">
           <span className="flex size-[38px] flex-none items-center justify-center rounded-xl bg-gradient-to-br from-[#f8c3a8] to-[#f2937a] text-white">
             <SunIcon />
@@ -280,8 +280,8 @@ export default function Home() {
         </div>
       </aside>
 
-      <main className="min-w-0 flex-1 overflow-y-auto">
-        <div className="mx-auto w-full max-w-[760px] px-10 pb-20 pt-[34px]">
+      <main className="min-h-screen min-w-0 w-full flex-1 lg:h-screen lg:min-h-0 lg:overflow-y-auto">
+        <div className="mx-auto w-full max-w-[760px] px-4 pb-36 pt-6 sm:px-6 sm:pt-8 lg:px-10 lg:pb-20 lg:pt-[34px]">
           <header className="mb-6">
             <p className="mb-1 text-[12.5px] font-extrabold tracking-[0.8px] text-[#d9583c]">
               GUARDERÍA · SALA {classroom.name.toUpperCase()}
@@ -301,7 +301,7 @@ export default function Home() {
             <span className="flex size-10 flex-none items-center justify-center rounded-full bg-[#f2937a] font-display text-base font-semibold text-white">
               {teacher.initials}
             </span>
-            <span className="flex-1 text-[15px] text-[#a89a8b]">
+            <span className="min-w-0 flex-1 truncate text-[15px] text-[#a89a8b]">
               Compartí un momento…
             </span>
             <span className="flex size-[38px] flex-none items-center justify-center rounded-xl bg-accent-soft text-[#e0654a]">
@@ -323,6 +323,35 @@ export default function Home() {
           </section>
         </div>
       </main>
+
+      <div className="fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface px-4 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] shadow-[0_-4px_16px_-12px_rgba(120,90,60,0.5)] lg:hidden">
+        <button
+          type="button"
+          className="flex w-full items-center justify-center gap-2 rounded-[14px] bg-gradient-to-b from-[#f4977e] to-[#ee8164] px-3 py-2.5 text-sm font-extrabold text-white shadow-[0_8px_18px_-8px_rgba(238,129,100,0.75)]"
+        >
+          <PlusIcon />
+          Nueva publicación
+        </button>
+        <nav
+          aria-label="Navegación principal"
+          className="mt-2 grid grid-cols-4 gap-1"
+        >
+          {navigationItems.map(({ label, active, icon }) => (
+            <span
+              key={label}
+              aria-current={active ? "page" : undefined}
+              className={`flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl px-1 text-[10.5px] ${
+                active
+                  ? "font-extrabold text-[#d9583c]"
+                  : "font-semibold text-[#6e6359]"
+              }`}
+            >
+              {icon}
+              <span className="whitespace-nowrap">{label}</span>
+            </span>
+          ))}
+        </nav>
+      </div>
     </div>
   );
 }
