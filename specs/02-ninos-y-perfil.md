@@ -1,6 +1,6 @@
 # SPEC 02 — Niños y perfil infantil
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-10-18
 > **Objetivo:** Añadir las pantallas responsive de gestión y perfil de niños en `/kids` y `/kids/[slug]`, usando datos ficticios y el estilo existente de OpenDayCare.
@@ -58,18 +58,18 @@ La lista contendrá Mateo Fernández, Sofía Méndez, Benjamín Ruiz, Valentina 
 
 ## Criterios de aceptación
 
-- [ ] `/kids` muestra los ocho niños con nombre, edad, cantidad de padres y etiquetas de referencia.
-- [ ] Cada tarjeta navega al perfil correspondiente mediante un slug único.
-- [ ] `/kids/[slug]` muestra datos propios del niño y conserva la composición visual de la referencia.
-- [ ] Todos los perfiles tienen fechas, notas y datos ficticios de padres; se respetan las cantidades de padres indicadas en el listado y Valentina no tiene padres vinculados.
-- [ ] Un slug inexistente responde con el estado 404.
-- [ ] El campo de búsqueda se muestra, pero escribir en él no filtra ni modifica la lista.
-- [ ] Agregar, editar, Resumen del día y Vincular otro padre son elementos visuales sin navegación ni cambios de datos.
-- [ ] Feed y Niños permiten navegar entre sus rutas y muestran correctamente cuál está activa.
-- [ ] En móvil, la lista se presenta en una columna, el perfil apila sus secciones y no hay desbordamiento horizontal.
-- [ ] Se mantienen los colores, tipografías, tarjetas e iconografía de las referencias.
-- [ ] No se introduce base de datos, backend ni persistencia.
-- [ ] `npm run lint` y `npm run build` finalizan correctamente.
+- [x] `/kids` muestra los ocho niños con nombre, edad, cantidad de padres y etiquetas de referencia.
+- [x] Cada tarjeta navega al perfil correspondiente mediante un slug único.
+- [x] `/kids/[slug]` muestra datos propios del niño y conserva la composición visual de la referencia.
+- [x] Todos los perfiles tienen fechas, notas y datos ficticios de padres; se respetan las cantidades de padres indicadas en el listado y Valentina no tiene padres vinculados.
+- [x] Un slug inexistente responde con el estado 404.
+- [x] El campo de búsqueda se muestra, pero escribir en él no filtra ni modifica la lista.
+- [x] Agregar, editar, Resumen del día y Vincular otro padre son elementos visuales sin navegación ni cambios de datos.
+- [x] Feed y Niños permiten navegar entre sus rutas y muestran correctamente cuál está activa.
+- [x] En móvil, la lista se presenta en una columna, el perfil apila sus secciones y no hay desbordamiento horizontal.
+- [x] Se mantienen los colores, tipografías, tarjetas e iconografía de las referencias.
+- [x] No se introduce base de datos, backend ni persistencia.
+- [x] `npm run lint` y `npm run build` finalizan correctamente.
 
 ## Decisiones
 
