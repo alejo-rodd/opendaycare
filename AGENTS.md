@@ -10,14 +10,15 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Project
 
-- This is a single npm package (`package-lock.json`); the Next.js App Router app lives in `app/`. The `@/*` TypeScript alias maps to the repository root.
-- Use `npm run dev` for development, `npm run lint` for ESLint, `npm run build` to verify a production build, and `npm start` to serve that build. No test or typecheck scripts are defined in `package.json`.
-- For spec-driven work, see `.agents/skills/spec/` and `.agents/skills/spec-impl/`; the implementation workflow requires an approved spec and pauses for review after each plan step.
+- Single npm package (`package-lock.json`); the Next.js App Router app is in `app/`, mock feed data is in `data/mock.ts`, and `@/*` resolves from the repository root.
+- Commands: `npm run dev`, `npm run lint`, `npm run build`, `npm start`. There are no test or typecheck scripts in `package.json`.
+- Before changing Next.js code, read the relevant installed-version guide in `node_modules/next/dist/docs/`; use Context7 for current framework/API docs as well.
 
 ## Tooling
 
-- Keep Playwright MCP artifacts (including screenshots) in `.playwright-mcp/`.
-- Use the Context7 MCP for current framework documentation.
+- Playwright MCP artifacts and screenshots belong in `.playwright-mcp/` (configured in `opencode.json`).
+- Spec workflow: `.agents/skills/spec/` drafts specs; `.agents/skills/spec-impl/` only implements approved specs and pauses for confirmation between plan steps.
+- Agent `verificador-spec` (`.opencode/agents/verificador-spec.md`) verifies acceptance criteria and may make the minimal code changes for a failing criterion only when its spec is approved; it rechecks criteria and uses Playwright for visual requirements.
 
 <!-- BEGIN:nextjs-agent-feedback -->
 
