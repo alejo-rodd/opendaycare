@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --background: #f6ecdf;
   --foreground: #3f362e;
   --surface: #fffdf9;
@@ -8,6 +9,12 @@
   --accent: #ee8164;
   --accent-soft: #fbe3d8;
   --muted: #94887b;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--background);
 }
 
 @theme inline {
@@ -28,7 +35,6 @@
 
 body {
   margin: 0;
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-nunito), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
