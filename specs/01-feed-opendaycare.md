@@ -1,6 +1,6 @@
 # SPEC 01 — Feed de OpenDayCare
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** Ninguna
 > **Fecha:** 2026-10-18
 > **Objetivo:** Reemplazar la pantalla inicial de `/` por un feed estático que reproduzca el estilo de `references/pantallas/feed.dc.html` y se adapte a móvil usando Tailwind CSS.
