@@ -44,14 +44,14 @@ Los textos, nombres, horas, destinatarios y contadores reproducirán el contenid
 
 ## Criterios de aceptación
 
-- [ ] La ruta `/` muestra el feed de OpenDayCare y no la pantalla inicial de Next.js.
-- [ ] El perfil, la sala, el saludo y las tres publicaciones se renderizan desde `data/mock.ts`.
-- [ ] En escritorio, la navegación lateral mide 248 px y el feed se presenta centrado con un ancho máximo aproximado de 760 px, como en la referencia.
-- [ ] En móvil, se muestra la navegación inferior, la acción «Nueva publicación» sigue visible y no hay desbordamiento horizontal.
-- [ ] Se conservan los colores, las tarjetas, las categorías, las tipografías Fredoka y Nunito y el placeholder de foto de la referencia.
-- [ ] Los controles y enlaces son solo presentación y no cambian estado ni navegan a pantallas inexistentes.
-- [ ] Los estilos de los componentes están implementados con clases de Tailwind CSS; `app/globals.css` queda para estilos globales.
-- [ ] `npm run lint` y `npm run build` finalizan correctamente.
+- [x] La ruta `/` muestra el feed de OpenDayCare y no la pantalla inicial de Next.js.
+- [x] El perfil, la sala, el saludo y las tres publicaciones se renderizan desde `data/mock.ts`.
+- [x] En escritorio, la navegación lateral mide 248 px y el feed se presenta centrado con un ancho máximo aproximado de 760 px, como en la referencia.
+- [x] En móvil, se muestra la navegación inferior, la acción «Nueva publicación» sigue visible y no hay desbordamiento horizontal.
+- [x] Se conservan los colores, las tarjetas, las categorías, las tipografías Fredoka y Nunito y el placeholder de foto de la referencia.
+- [x] Los controles y enlaces son solo presentación y no cambian estado ni navegan a pantallas inexistentes.
+- [x] Los estilos de los componentes están implementados con clases de Tailwind CSS; `app/globals.css` queda para estilos globales.
+- [x] `npm run lint` y `npm run build` finalizan correctamente.
 
 ## Decisiones
 
