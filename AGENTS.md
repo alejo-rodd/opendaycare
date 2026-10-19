@@ -8,6 +8,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## MCPS
+## Project
 
-- Playwright screenshots y cualquier cosa relacionada a Playwrigth tienen que estar en la carpeta .playwright-mcp.
+- This is a single npm package (`package-lock.json`); the Next.js App Router app lives in `app/`. The `@/*` TypeScript alias maps to the repository root.
+- Use `npm run dev` for development, `npm run lint` for ESLint, `npm run build` to verify a production build, and `npm start` to serve that build. No test or typecheck scripts are defined in `package.json`.
+- For spec-driven work, see `.agents/skills/spec/` and `.agents/skills/spec-impl/`; the implementation workflow requires an approved spec and pauses for review after each plan step.
+
+## Tooling
+
+- Keep Playwright MCP artifacts (including screenshots) in `.playwright-mcp/`.
+- Use the Context7 MCP for current framework documentation.
